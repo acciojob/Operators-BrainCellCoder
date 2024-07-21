@@ -21,7 +21,7 @@
             <option value="/">/</option>
         </select>
         <button id="calculate">Calculate</button>
-        <div id="result">Result: </div>
+        <div id="result"></div>
     </div>
 
     <div class="container">
@@ -34,7 +34,6 @@
     </div>
 
     <script type="text/javascript">
-        // Calculator functionality
         document.getElementById('calculate').addEventListener('click', function() {
             const num1 = parseFloat(document.getElementById('num1').value);
             const num2 = parseFloat(document.getElementById('num2').value);
@@ -58,10 +57,9 @@
                     result = 'Invalid operator';
             }
 
-            document.getElementById('result').innerText = 'Result: ' + result;
+            document.getElementById('result').innerText = result;
         });
 
-        // Text change functionality
         document.getElementById('change_text').addEventListener('click', function() {
             const divisions = document.getElementsByClassName('division');
             const newTexts = ['Bye', 'Good Bye', 'To', 'Your', 'Class'];
